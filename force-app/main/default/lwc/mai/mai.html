@@ -1,0 +1,26 @@
+<template>
+    <lightning-card  title="Email to Others" icon-name="standard-email">
+        <div class="slds-m-around-medium">
+            <label class="slds-form-element__label">From</label>
+            <div class="slds-form-element__control">
+                <div class="slds-select_container">
+                  <select class="slds-select" onchange={selectOptionChanveValue}>
+                    <option value="">---None---</option>                
+                    <template for:each={cons.data} for:item="selectOptItem">
+                            <option key={selectOptItem.id} value={selectOptItem.Address}>
+                              {selectOptItem.Address}
+                            </option>
+                    </template>      
+                  </select>
+                </div>
+              </div>
+            <!-- <lightning-input label="From" value={from} type="text" onchange = {handleFromchange}></lightning-input> -->
+            <lightning-input label="To" value={email} type="text" onchange = {handlemailchange}></lightning-input>
+            <lightning-input label="Subject" value={Subject} type="text" onchange = {handlesubjectchange}></lightning-input>
+            <lightning-textarea name="body" label="body" value={body} onchange={handledescriptionchange} placeholder="type here..."></lightning-textarea>
+            <lightning-button variant="brand" label="Send" title="Primary action" alternative-text = "Add task" onclick={sendemailafterEvent} class="slds-m-left_x-small"></lightning-button>            
+
+
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+  
+  <h1>parent</h1>
+  <ul>
+    <template for:each = {employees} for:item = "emp" for:index = "index">  >
+           <li key = {emp.code}>
+               Employee record {emp.name} : {emp.age} : {emp.code}
+               <c-task-1 callfrom = {emp}></c-task-1>
+               
+           </li>
+           
+    </template>
+</ul>
+
+
+</template>

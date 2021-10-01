@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  title="Calculation">
+        <lightning-input type="number" name="Number1" label="Number1" placeholder="type here..." onchange={handle1}></lightning-input>
+        <lightning-input type="number" name="Number2" label="Number2" placeholder="type here..." onchange={handle2}></lightning-input>
+        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={calcexpr} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={calcexpr1} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={calcexpr2} class="slds-m-left_x-small"></lightning-button>
+        <lightning-button variant="brand" label="Brand" title="Primary action" onclick={calcexpr3} class="slds-m-left_x-small"></lightning-button>
+        <lightning-input name="Result" label="Result" read-only="true" value={result}></lightning-input>
+
+
+    </lightning-card>
+</template>

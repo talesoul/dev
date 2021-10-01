@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Contact search" >
+               <lightning-layout multiple-rows="true" vertical-align="end">
+                   <lightning-layout-item size="4" padding="around-small">
+                       <lightning-input type="text" label="Enter Contact Name" value={searchkey} onchange={updatekey}></lightning-input>
+                   </lightning-layout-item>
+                   
+                   <lightning-layout-item size="2" padding="around-small">
+                       <lightning-button label="Search" onclick={handlesearch} variant="brand" ></lightning-button>
+                   </lightning-layout-item>
+
+                   <lightning-layout-item size="12" padding="around-small">
+                       <lightning-datatable key-field="id" data={contacts} columns={cols}></lightning-datatable>
+                   </lightning-layout-item>
+
+                   <!-- <lightning-layout-item size="12" padding="around-small">
+                    <lightning-datatable key-field="id" data={contacts} columns={cols}></lightning-datatable>
+                </lightning-layout-item> -->
+                   
+               </lightning-layout>
+            
+      
+    </lightning-card>
+</template>

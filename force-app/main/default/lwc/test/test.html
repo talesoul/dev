@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="find contact">
+        <lightning-input type="search" onchange={handlesearch} class="slds-m-bottom_small" label="search contact">
+
+        <div if:true={conta}>
+            <template if:true={conta.data}>
+
+            <template for:each={conta.data} for:item="acc">
+                <p key = {acc.id}> {acc.name}</p>
+
+            </template>
+            </template>
+
+        </div>
+        </lightning-input>
+
+    </lightning-card>
+    
+</template>

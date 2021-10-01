@@ -1,0 +1,35 @@
+<template>
+    <lightning-card  title="Log complaints" >
+        <lightning-input type="text" name="Log complain Name" label="Log complain Name" onchange={guestChangeName}></lightning-input>
+        <lightning-input type="text" name="Email" label="Email" onchange={onchangeEmail}></lightning-input>
+        <lightning-combobox
+            name="progress"
+            label="Reason for Complain"
+            value={value}
+            placeholder="Select Progress"
+            options={options}
+            onchange={handleChange} >
+        </lightning-combobox>
+        <lightning-input type="date" name="Date of complaint" label="Date of complaint" ></lightning-input>
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+            <h2 class="slds-text-heading_medium slds-m-bottom_medium">
+                Describe the details
+            </h2>
+            <div class="slds-p-around_medium lgc-bg">
+                <lightning-input-rich-text type="text" label="Describe the details" placeholder="type here..." value={myVal} formats={formats}>
+                </lightning-input-rich-text>
+            </div>
+        </div>
+
+    <div class="slds-p-top_medium">
+        <div class="modal-footer slds-modal__footer slds-size_1-of-1">
+                <div class="forceChangeRecordTypeFooter">
+                <lightning-button variant="brand" label="Save" onclick={saveRecord}></lightning-button>
+                </div>
+        </div>
+        </div>
+    
+
+    </lightning-card>
+
+</template>
